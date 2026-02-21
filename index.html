@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swift Lane Workforce | Ductwork & Ventilation Installers (NI & ROI)</title>
+  <meta name="description" content="Swift Lane Workforce — ductwork & mechanical ventilation labour teams across Northern Ireland & Republic of Ireland. 20+ years experience. Call/WhatsApp 07935 434153." />
+
+  <!-- Open Graph (for sharing) -->
+  <meta property="og:title" content="Swift Lane Workforce | Ductwork & Ventilation Installers (NI & ROI)" />
+  <meta property="og:description" content="Availability for the coming weeks. HVAC, ductwork, MVHR/HRU/AHU, fire & smoke dampers, snagging & remedials. Call/WhatsApp 07935 434153." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#070b18;
+      --card:#0d1433;
+      --muted:#9fb0d7;
+      --text:#eaf0ff;
+      --brand:#2b56ff;
+      --brand2:#0ea5e9;
+      --accent:#f5c542;
+      --border: rgba(255,255,255,.10);
+      --shadow: 0 20px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(43,86,255,.35), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(14,165,233,.25), transparent 60%),
+                  linear-gradient(180deg, #050814, #070b18 40%, #050814);
+      color: var(--text);
+      line-height:1.5;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px}
+
+    /* Top bar */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,24,.65);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar .inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 22px; max-width:var(--max); margin:0 auto;
+    }
+    .brandmark{
+      display:flex; align-items:baseline; gap:10px;
+      font-weight:700; letter-spacing:.4px;
+    }
+    .brandmark .name{font-size:18px}
+    .brandmark .tag{font-size:12px; color:var(--muted); font-weight:600}
+    .navlinks{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+    .navlinks a{
+      text-decoration:none; font-weight:600; color:var(--muted);
+      padding:8px 10px; border-radius:12px;
+    }
+    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:10px 14px;
+      text-decoration:none;
+      font-weight:800;
+      box-shadow: 0 10px 30px rgba(0,0,0,.22);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn-primary{
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      border-color: rgba(255,255,255,.18);
+      color:white;
+    }
+    .btn-ghost{
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+    }
+    .btn-accent{
+      background: linear-gradient(135deg, var(--accent), #ffd66b);
+      color:#101322;
+      border-color: rgba(255,255,255,.18);
+    }
+
+    /* Hero */
+    .hero{
+      padding:32px 0 10px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
+
+    .panel{
+      background: rgba(13,20,51,.78);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding:26px}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+      background: rgba(245,197,66,.12);
+      border: 1px solid rgba(245,197,66,.25);
+      color: #ffe4a6;
+      padding:8px 12px;
+      border-radius:999px;
+      margin-bottom:14px;
+    }
+    .kicker span.dot{
+      width:10px; height:10px; border-radius:999px; background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(245,197,66,.20);
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(28px, 3.2vw, 46px);
+      line-height:1.05;
+      letter-spacing:-.8px;
+    }
+    .sub{
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0 0 18px;
+      max-width: 62ch;
+    }
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px}
+    .bullets{
+      display:grid; gap:10px;
+      margin-top:18px;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+    @media (max-width: 560px){ .bullets{grid-template-columns:1fr} }
+    .bullet{
+      display:flex; gap:10px; align-items:flex-start;
+      color: var(--text);
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      padding:12px 12px;
+      border-radius: 14px;
+    }
+    .tick{
+      width:22px; height:22px; border-radius:8px;
+      background: rgba(14,165,233,.18);
+      border: 1px solid rgba(14,165,233,.35);
+      display:flex; align-items:center; justify-content:center;
+      flex: 0 0 22px;
+      margin-top:1px;
+    }
+    .tick svg{width:14px; height:14px}
+
+    .hero-right{padding:20px; display:flex; flex-direction:column; gap:12px}
+    .availability{
+      padding:16px;
+      border-radius: 16px;
+      border: 1px solid rgba(43,86,255,.25);
+      background: linear-gradient(180deg, rgba(43,86,255,.18), rgba(13,20,51,.78));
+    }
+    .availability h3{margin:0 0 6px; font-size:16px}
+    .availability p{margin:0; color: var(--muted)}
+    .contact-card{
+      padding:16px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+    }
+    .contact-card h3{margin:0 0 10px; font-size:16px}
+    .contact-grid{display:grid; gap:10px}
+    .contact-line{
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      padding:10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+    }
+    .contact-line .label{color: var(--muted); font-weight:700}
+    .contact-line .value{font-weight:900}
+
+    /* Sections */
+    section{padding:18px 0}
+    .grid-3{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+    @media (max-width: 900px){ .grid-3{grid-template-columns:1fr} }
+
+    .card{padding:18px}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0; color: var(--muted)}
+    .chiprow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .chip{
+      font-weight:800; font-size:12px;
+      color:#cfe2ff;
+      padding:8px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.06);
+    }
+
+    /* Services list */
+    .list{
+      margin:0; padding:0; list-style:none;
+      display:grid; gap:10px;
+    }
+    .list li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .list strong{display:block}
+    .small{font-size:13px; color: var(--muted)}
+
+    /* Form */
+    .form{
+      display:grid; gap:10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 800px){ .form{grid-template-columns:1fr} }
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.25);
+      color: var(--text);
+      outline:none;
+      font: inherit;
+    }
+    textarea{min-height:120px; resize:vertical; grid-column:1/-1}
+    input::placeholder, textarea::placeholder{color: rgba(159,176,215,.75)}
+    .form-actions{
+      grid-column:1/-1;
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      justify-content:space-between;
+      padding-top:6px;
+    }
+    .note{color: var(--muted); font-size:13px}
+
+    /* Footer */
+    footer{
+      padding:26px 0 40px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 16px;
+    }
+
+    .divider{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent);
+      margin: 8px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="inner">
+      <div class="brandmark" aria-label="Swift Lane Workforce">
+        <div class="name">SWIFT LANE WORKFORCE</div>
+        <div class="tag">Ductwork & Ventilation • NI & ROI</div>
+      </div>
+      <nav class="navlinks" aria-label="Site">
+        <a href="#services">Services</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#standards">Standards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="tel:+447935434153" aria-label="Call Swift Lane Workforce">
+        📞 Call: 07935 434153
+      </a>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <div class="hero">
+      <div class="panel hero-left">
+        <div class="kicker"><span class="dot"></span> Availability for the coming weeks</div>
+        <h1>Duct Installation Pair available across NI & ROI</h1>
+        <p class="sub">
+          Swift Lane Workforce provides experienced, labour-only ductwork & mechanical ventilation teams.
+          20+ years’ experience, fully equipped vans, and all certifications in date.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-accent" href="https://wa.me/447935434153" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:swiftlaneworkforce@gmail.com?subject=Enquiry%20-%20Swift%20Lane%20Workforce">✉️ Email</a>
+          <a class="btn btn-ghost" href="#contact">🧾 Request a callback</a>
+        </div>
+
+        <div class="bullets" aria-label="Key points">
+          <div class="bullet">
+            <div class="tick" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><strong>HVAC & mechanical ventilation installs</strong><div class="small">From first-fix to second-fix completion</div></div>
+          </div>
+          <div class="bullet">
+            <div class="tick" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><strong>Spiral, rectangular & stainless ductwork</strong><div class="small">High-quality installation & finishing</div></div>
+          </div>
+          <div class="bullet">
+            <div class="tick" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><strong>MVHRs / HRUs / AHUs</strong><div class="small">Units, connections, grilles & accessories</div></div>
+          </div>
+          <div class="bullet">
+            <div class="tick" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><strong>Snagging & remedial works</strong><div class="small">Bring installations up to current standards</div></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel hero-right" aria-label="Quick info">
+        <div class="availability">
+          <h3>🔧 Availability update</h3>
+          <p>Open to taking on additional work in the coming weeks — short-term support or fixed-price packages.</p>
+          <div class="chiprow" aria-label="Hiring options">
+            <span class="chip">Ongoing Projects</span>
+            <span class="chip">Finishing / Snagging</span>
+            <span class="chip">Fixed-Price Packages</span>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3>📍 Based in Derry / North West</h3>
+          <div class="contact-grid">
+            <div class="contact-line"><span class="label">Coverage</span><span class="value">NI & ROI</span></div>
+            <div class="contact-line"><span class="label">Phone</span><span class="value"><a href="tel:+447935434153">07935 434153</a></span></div>
+            <div class="contact-line"><span class="label">Email</span><span class="value"><a href="mailto:swiftlaneworkforce@gmail.com">swiftlaneworkforce@gmail.com</a></span></div>
+          </div>
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="tel:+447935434153">📞 Call now</a>
+            <a class="btn btn-ghost" href="https://wa.me/447935434153" target="_blank" rel="noopener">💬 WhatsApp</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="divider"></div>
+
+    <section id="services" aria-label="Services">
+      <div class="grid-3">
+        <div class="panel card">
+          <h3>What we do</h3>
+          <ul class="list">
+            <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>HVAC & mechanical ventilation installs</strong><div class="small">Labour teams to support your programme</div></div>
+            </li>
+            <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Ductwork installation</strong><div class="small">Spiral, rectangular & stainless</div></div>
+            </li>
+            <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>MVHRs / HRUs / AHUs</strong><div class="small">Units, connections, grilles & accessories</div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel card">
+          <h3>Specialist items</h3>
+          <ul class="list">
+            <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Fire & smoke dampers</strong><div class="small">VCD / SBD installation support</div></div>
+            </li>
+            <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Grilles, plenums, attenuators & louvres</strong><div class="small">Neat, accurate finishing</div></div>
+            </li>
+            <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>First-fix → second-fix completion</strong><div class="small">Reliable follow-through & handover</div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel card">
+          <h3>Ideal for</h3>
+          <p>We can slot into projects that need extra hands, oversight, or finishing.</p>
+          <div class="chiprow">
+            <span class="chip">Ongoing installs</span>
+            <span class="chip">Snagging</span>
+            <span class="chip">Remedials</span>
+            <span class="chip">Short-term cover</span>
+            <span class="chip">Fixed-price packages</span>
+          </div>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="#contact">Get a quote / availability</a>
+            <a class="btn btn-ghost" href="mailto:swiftlaneworkforce@gmail.com?subject=Project%20details%20-%20Swift%20Lane%20Workforce">Send project details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="coverage" aria-label="Coverage">
+      <div class="panel card">
+        <h3>Coverage</h3>
+        <p>📍 Based in <strong>Derry / North West</strong> — willing to travel throughout <strong>Northern Ireland</strong> and the <strong>Republic of Ireland</strong>.</p>
+        <div class="chiprow" style="margin-top:12px;">
+          <span class="chip">NI</span>
+          <span class="chip">ROI</span>
+          <span class="chip">Site support</span>
+          <span class="chip">Labour-only teams</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="standards" aria-label="Standards and readiness">
+      <div class="grid-3">
+        <div class="panel card">
+          <h3>Experience</h3>
+          <p><strong>20+ years</strong> in HVAC, ductwork and mechanical ventilation installations.</p>
+        </div>
+        <div class="panel card">
+          <h3>Fully equipped</h3>
+          <p>Fully equipped vans, tools supplied, ready to mobilise to site.</p>
+        </div>
+        <div class="panel card">
+          <h3>Certifications</h3>
+          <p>All certifications kept in date (as per your statement). Share specifics on request.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-label="Contact">
+      <div class="panel card">
+        <h3>Contact Swift Lane Workforce</h3>
+        <p class="small">Fill this in and press “Create email” — it opens your email app with everything pre-written.</p>
+
+        <form id="contactForm" class="form">
+          <input id="name" name="name" placeholder="Your name / company" required />
+          <input id="phone" name="phone" placeholder="Phone number" />
+          <input id="location" name="location" placeholder="Project location (NI / ROI)" />
+          <input id="start" name="start" placeholder="Start date / timeframe" />
+          <textarea id="message" name="message" placeholder="Project details (scope, duration, site hours, access, drawings, etc.)" required></textarea>
+
+          <div class="form-actions">
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn btn-primary" type="submit">✉️ Create email</button>
+              <a class="btn btn-ghost" href="tel:+447935434153">📞 Call: 07935 434153</a>
+              <a class="btn btn-accent" href="https://wa.me/447935434153" target="_blank" rel="noopener">💬 WhatsApp</a>
+            </div>
+            <div class="note">Email: <a href="mailto:swiftlaneworkforce@gmail.com">swiftlaneworkforce@gmail.com</a></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> Swift Lane Workforce</div>
+        <div>Based in Derry / North West • Available across NI & ROI</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form -> mailto prefill
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const location = document.getElementById('location').value.trim();
+      const start = document.getElementById('start').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent(`Project enquiry — ${name || 'Swift Lane Workforce'}`);
+      const bodyLines = [
+        `Name/Company: ${name}`,
+        `Phone: ${phone || '-'}`,
+        `Project location: ${location || '-'}`,
+        `Timeframe: ${start || '-'}`,
+        ``,
+        `Project details:`,
+        message,
+        ``,
+        `---`,
+        `Sent via Swift Lane Workforce website`
+      ];
+
+      const body = encodeURIComponent(bodyLines.join('\n'));
+      const mailto = `mailto:swiftlaneworkforce@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
